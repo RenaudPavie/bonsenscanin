@@ -1,5 +1,25 @@
-body {
-  background: red;
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+/* VARIABLES */
+/* NAVIGATION */
+nav.navbar {
+  background-color: #0000000f !important;
+  font-family: serif;
+  padding: 0 150px;
+}
+nav.navbar a.navbar-brand {
+  color: #fff;
+  font-family: "Sacramento", cursive;
+  font-size: 42px;
+}
+nav.navbar ul.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+nav.navbar a.nav-link {
+  color: #fff !important;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */
