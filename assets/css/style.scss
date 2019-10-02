@@ -2,17 +2,29 @@
 
 /* VARIABLES */
 $unit-padding : 15px;
+$unit-size-h2: 45px;
+$unit-size-h3: 16px;
 
 $white : #fff;
 $grey-hover: #737475;
+$black: #222;
+$brown: #a7917f;
 
 $brand-font: 'Sacramento', cursive;
+$title-font: serif;
+$paragraph-font: sans-serif;
 
+body {
+  p {
+    font-family: $title-font;
+    color: $black;
+  }
+}
 
 /* NAVIGATION */
 nav.navbar {
     background-color: #0000000f !important;
-    font-family: serif;
+    font-family: $title-font;
     padding: 0 150px;
     height: 75px;
     a.navbar-brand {
@@ -40,6 +52,7 @@ nav.navbar {
         }
 
 }
+
 #mainHeader {
   background-image: url('../img/background-header.jpg');
   background-position: top center;
@@ -67,5 +80,150 @@ nav.navbar {
     border: 1px solid black;
     text-transform: uppercase;
     font-weight: 600;
+  }
+}
+
+/* PRESENTATIONS */
+#presentation {
+  text-align: center;
+  position: relative;
+
+  .row {
+    .left {
+      h2 {
+        font-family: $title-font;
+        color: $black;
+        font-weight: 700;
+        font-size: $unit-size-h2;
+        margin-bottom: 0;
+      }
+    
+      h3 {
+        font-family: $title-font;
+        color: $brown;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: $unit-size-h3;
+        padding: 0;
+      }
+    
+      p.education-presentation {
+        font-family: $paragraph-font;
+        color: $black;
+        font-size: 13px;
+        line-height: 22px;
+        margin: 50px 0;
+      }
+    
+      p.education-job {
+        color: $brown;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    
+      .education-name {
+        .row {
+          div:first-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            padding: 0;
+    
+            &::before, &::after {
+              content: "";
+              display: block;
+              width: 115px;
+              height: 2px;
+              background: $brown;
+            }
+    
+            p {
+              margin: 8px 0;
+              width: 115px;
+              font-size: 10px;
+            }
+          }
+          div:last-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0;
+    
+            &::before, &::after {
+              content: "";
+              display: block;
+              width: 115px;
+              height: 2px;
+              background: $brown;
+            }
+    
+            p {
+              margin: 8px 0;
+              width: 115px;
+              font-size: 10px;
+            }
+          }
+          div.col-sm-2 {
+            position: relative;
+    
+            i.fas.fa-paw {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              right: 0;
+              left: 0;
+              margin: auto;
+    
+              &::before {
+              border: 2px #222 solid;
+              border-radius: 50px;
+              padding: 7px;
+              }
+            }
+          }
+        }
+      }
+
+      .quote-box {
+        overflow: hidden;
+          margin-top: -50px;
+          padding-top: -100px;
+          border-radius: 17px;
+          margin-top: 25px;
+
+        p.quote-text {
+          color: #a7917f;
+          font-family: "Sacramento", cursive;
+          font-size: 30px;
+          padding: 0 100px;
+        }
+      
+        .quotation-mark{
+            margin-top: -10px;
+            font-weight: bold;
+            font-size: 100px;
+            color:$brown;
+            font-family: "Times New Roman", Georgia, Serif;  
+            text-align: left;
+        }
+        
+        .quote-text{
+            font-size: 19px;
+            margin-top: -65px;
+        }
+      }
+    }
+    .right {
+      img {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      left: 0;
+      margin: auto;
+      }
+    }
   }
 }
